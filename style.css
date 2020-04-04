@@ -1,0 +1,400 @@
+/* Global Selectors */
+
+:root {
+    --red: #e50914;
+    --dark: #141414;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+.orange-btn {
+    background-color: var(--red);
+    padding: 0.6em 0.9em;
+    transition: opacity 0.2s ease;
+}
+
+.orange-btn:hover {
+    opacity: 0.8;
+}
+
+.gray-text {
+    color: #999999;
+}
+
+.watch-free {
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.nav-active {
+    border-bottom: 4px solid var(--red);
+}
+
+body {
+    background-color: var(--dark);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* HEADER  */
+
+header {
+    height: 95vh;
+    max-height: 1125px;
+    text-align: center;
+    position: relative;
+    background: url(img/background.jpg) no-repeat center center/cover;
+}
+
+header::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.288), black);
+}
+
+header>* {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 2;
+}
+
+header img {
+    width: 190px;
+    top: 2%;
+}
+
+.sign-in {
+    top: 20px;
+    right: 100px;
+    border-radius: 6px;
+}
+
+header h1 {
+    top: 50%;
+    transform: translate(50%, -100%);
+    width: 100%;
+    font-size: 5.5rem;
+    padding: 0 20px;
+}
+
+header h3 {
+    top: 60%;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 100;
+    padding: 0 20px;
+}
+
+header .watch-free {
+    top: 75%;
+    font-size: 2.2rem;
+    width: fit-content;
+    max-width: 90%;
+}
+
+.watch-free i {
+    margin-left: 0.5em;
+}
+
+
+/* NAV  */
+
+nav {
+    height: 150px;
+    background-color: var(--dark);
+    text-align: center;
+    border-bottom: 4px solid #3D3D3D;
+    padding: 20px 10px 0;
+    margin-bottom: 60px;
+}
+
+nav ul {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nav-item {
+    float: left;
+    width: 33%;
+    height: 100%;
+    line-height: 2.2rem;
+    cursor: pointer;
+    padding-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.nav-item:hover>* {
+    color: white;
+}
+
+nav .fas {
+    font-size: 3rem;
+    line-height: 4rem;
+    width: 100%;
+}
+
+
+/* MAIN  */
+
+section {
+    display: grid;
+    gap: 1rem;
+}
+
+
+/* SECTION 1 */
+
+.section-cancel {
+    width: 65%;
+    margin: 40px auto;
+    grid-template-areas: 'txt img' 'btn img';
+}
+
+.section-cancel p {
+    grid-area: txt;
+    font-size: 1.9rem;
+    padding-top: 2rem;
+}
+
+.section-cancel a {
+    grid-area: btn;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.1rem;
+}
+
+.section-cancel img {
+    margin: auto;
+    grid-area: img;
+    width: 30vw;
+}
+
+
+/* SECTION 2 */
+
+.section-anywhere {
+    width: 65%;
+    margin: 0em auto;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+}
+
+.section-anywhere p:first-child {
+    grid-column: 1 / 3;
+    font-size: 1.8rem;
+    height: fit-content;
+}
+
+.section-anywhere a {
+    grid-column: 3/ span 1;
+    text-align: center;
+    height: fit-content;
+}
+
+.section-anywhere img {
+    padding-top: 20px;
+    width: 100%;
+    grid-row: 2/3;
+}
+
+.section-anywhere h3 {
+    grid-row: 3/4;
+    text-align: center;
+    font-weight: 400;
+}
+
+.section-anywhere p:not(:first-child) {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+
+/* SECTION 3 */
+
+.section-prices {
+    width: 65%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-prices h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 1.5rem;
+}
+
+.section-prices a {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.section-prices table {
+    margin: 30px auto;
+    width: 100%;
+    line-height: 2.5rem;
+    border-collapse: collapse;
+}
+
+.section-prices th {
+    padding: 2px;
+}
+
+.section-prices td:first-child {
+    text-align: left;
+    padding: 0 1rem;
+}
+
+.section-prices table tr:nth-child(even) {
+    background-color: #222222;
+}
+
+.section-prices table tr,
+.section-prices tbody,
+.section-prices td,
+.section-prices i {
+    color: inherit;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 65%;
+    margin: 10px auto;
+}
+
+footer * {
+    color: inherit;
+    font-size: 0.9rem;
+    overflow: auto;
+}
+
+footer ul {
+    float: left;
+    width: 25%;
+    padding: 2rem 0;
+    line-height: 1.5rem;
+}
+
+@media (max-width: 960px) {
+    header img {
+        right: 98%;
+        transform: translateX(100%);
+    }
+    nav p {
+        display: none;
+    }
+    nav {
+        height: 110px;
+    }
+    .section-cancel p {
+        font-size: 1.3rem;
+    }
+}
+
+@media( max-width:700px) {
+    .sign-in {
+        right: 50px;
+    }
+    nav {
+        margin-bottom: 0;
+    }
+    .section-cancel {
+        grid-template-areas: 'txt' 'btn' 'img';
+        text-align: center;
+        margin-top: 0;
+    }
+    .section-cancel a {
+        margin: 10px auto;
+    }
+    .section-anywhere {
+        text-align: center;
+        display: block;
+    }
+    .section-anywhere>* {
+        grid-column: 1 / span 3;
+        grid-row: 0
+    }
+    .section-anywhere p:first-child {
+        margin: 30px 0;
+    }
+    .section-anywhere a {
+        margin: auto;
+    }
+    .section-prices {
+        width: 99%;
+    }
+    footer ul {
+        width: 50%
+    }
+    footer ul:nth-child(3) {
+        clear: both;
+    }
+}
+
+@media (max-width: 425px) {
+    header h1 {
+        font-size: 4rem;
+    }
+    .section-prices table {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 360px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    header h3 {
+        font-size: 1rem;
+    }
+    header .watch-free {
+        font-size: 1.5rem;
+    }
+    .section-anywhere a {
+        padding: 10px;
+    }
+}
+
+@media (orientation:landscape) {
+    header h1 {
+        font-size: 4rem;
+    }
+    header h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-height: 320px) {
+    header .watch-free {
+        font-size: 1.5rem;
+    }
+}
+
+.hidden {
+    display: none;
+}

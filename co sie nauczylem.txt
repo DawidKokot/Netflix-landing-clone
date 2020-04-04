@@ -1,0 +1,5 @@
+zmienne CCS - tak naprawde: custom properties
+background: url position / size
+grid-template-areas, template-columns/rows
+repeat(ilosc, parametr) zamiast parametr parametr ...
+border-collapse: collapse (linie wewnatrz tabeli)
